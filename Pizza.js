@@ -1,6 +1,6 @@
 window.onload = oppstart;
 
-let pizzas = 0;
+let pizzas = 100;
 
 let clicker = 0;
 let clickerMultiplier = 1.1;
@@ -11,13 +11,13 @@ let clickerUpgradeCost = 1000;
 
 let ovens = 0;
 let OvenFarm = 2.5;
-let ovenPrice = 150;
+let ovenPrice = 100;
 
 let ovenUpgrades = 0;
 let ovenUpgradeCost = 1000;
 
 let pepperoni = 0;
-let pepperoniMultiplier = 1.5;
+let pepperoniMultiplier = 2;
 let pepperoniPrice = 500;
 
 function oppstart() {
@@ -30,6 +30,7 @@ function oppstart() {
   document.getElementById("ClickerUpgradeBuy").onclick = buyClickerUpgrades;
   document.getElementById("oven-upgrades").style.display = "none";
   document.getElementById("OvenUpgradeBuy").onclick = BuyOvenUpgrades;
+  document.getElementById("pps-outer").style.display = "none";
 }
 
 function pizza() {
@@ -50,13 +51,19 @@ function pizza() {
   } else {
     document.getElementById("oven-upgrades").style.display = "none";
   }
+
+  if (pizzas == NaN) {
+    alert("Du Ødla spillet, Gratulerer!");
+  }
+
+  updatePps();
 }
 
 function clickerfarm() {
   if (pizzas >= clickerPrice) {
     clicker++;
     pizzas -= clickerPrice;
-    clickerPrice = clickerPrice * 1.5;
+    clickerPrice = clickerPrice * 1.15;
     document.getElementById("clicker-quantity").innerHTML = clicker;
     document.getElementById("clicker-price").innerHTML =
       clickerPrice.toFixed(2);
@@ -74,7 +81,7 @@ function buyClickerUpgrades() {
     document.getElementById("clickerUpgradeCost").innerHTML =
       clickerUpgradeCost;
     document.getElementById("pizzas").innerHTML = pizzas.toFixed(2);
-    clickerMultiplier += clickerMultiplier * 2;
+    clickerMultiplier += clickerMultiplier * 1.5;
   } else {
     alert("Du har ikke nokk pizzas for å kjøpe en clicker oppgradering!");
   }
@@ -84,10 +91,11 @@ function BuyOven() {
   if (pizzas >= ovenPrice) {
     ovens++;
     pizzas -= ovenPrice;
-    ovenPrice = ovenPrice * 1.3;
+    ovenPrice = ovenPrice * 1.15;
     document.getElementById("oven-price").innerHTML = ovenPrice.toFixed(2);
     document.getElementById("oven-quantity").innerHTML = ovens;
     document.getElementById("pizzas").innerHTML = pizzas.toFixed(2);
+    updatePps();
   } else {
     alert("Du har ikke nokk pizzas for å kjøpe en Oven");
   }
@@ -106,22 +114,29 @@ function BuyOvenUpgrades() {
   }
 }
 
+function updatePps() {
+  if (ovens > 0) {
+    document.getElementById("pps-outer").style.display = "block";
+  }
+}
+
 function addPizzasFromOvens() {
-  pizzas += ovens * 2 * Math.pow(2, ovenUpgrades);
-  PizzaprSec = ovens * 2 * Math.pow(2, ovenUpgrades);
+  pizzas += ovens * 1.5 * Math.pow(1.5, ovenUpgrades);
+  PizzaprSec = ovens * 1.5 * Math.pow(1.5, ovenUpgrades);
   document.getElementById("pizzas").innerHTML = pizzas.toFixed(2);
-  document.getElementById("pizza-per-sec").innerHTML = PizzaprSec;
+  document.getElementById("pizza-per-sec").innerHTML = PizzaprSec.toFixed();
 }
 
 function buyPepperoni() {
   if (pizzas >= pepperoniPrice) {
     pepperoni++;
     pizzas -= pepperoniPrice;
-    pepperoniPrice = pepperoniPrice * 2;
+    pepperoniPrice = pepperoniPrice * 1.15;
     document.getElementById("pepperoni-quantity").innerHTML = pepperoni;
     document.getElementById("pepperoni-price").innerHTML =
       pepperoniPrice.toFixed(2);
     document.getElementById("pizzas").innerHTML = pizzas.toFixed(2);
+    updatePps();
   } else {
     alert("Du har ikke nokk pizzas for å kjøpe en pepperoni!");
   }

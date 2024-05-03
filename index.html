@@ -9,8 +9,17 @@
   <body>
     <div class="wrapper">
       <div class="spill">
-        <h2><span id="pizzas">0.00</span> Pizzas</h2>
-        <h3><span id="pizza-per-sec">0</span> Pizzas per sekund</h3>
+        <div class="pizzaHeader">
+          <h2>
+            <span id="pizzas">0.00</span> <br />
+            Pizzas
+          </h2>
+          <h5 id="pps-outer">
+            <span id="pizza-per-sec">0</span> Pizzas per sekund
+          </h5>
+        </div>
+        <br />
+        <br />
         <button id="pizza-button">
           <img
             src="bilder/360_F_660745815_t42ZNjS0uffcI6LcsYy13asY8lHS5Lpw.jpg"
@@ -21,20 +30,20 @@
       </div>
       <div id="kjop">
         <div id="clicker">
-          <h5>
+          <h4>
             Clickers koster <span id="clicker-price">25</span> Pizzas<button
               id="clicker-buy"
             >
               Kjøp
             </button>
-          </h5>
+          </h4>
           <h5>Du har <span id="clicker-quantity">0</span> Clickers</h5>
           <!-- */add clicker oppgraderinger når man har fått 100 pizzas -->
 
           <div id="clicker-upgrades">
             <h5>
               Oppgradering koster
-              <span id="clickerUpgradeCost">100</span> pizzas
+              <span id="clickerUpgradeCost">1000</span> pizzas
             </h5>
             <button id="ClickerUpgradeBuy">Kjøp</button>
           </div>
@@ -42,7 +51,7 @@
 
         <div id="oven">
           <h5>
-            Oven koster <span id="oven-price">150</span> Pizzas<button
+            Oven koster <span id="oven-price">100</span> Pizzas<button
               id="oven-buy"
             >
               Kjøp
@@ -53,7 +62,7 @@
           <div id="oven-upgrades">
             <h5>
               Oppgradering koster
-              <span id="ovenUpgradeCost">500</span> pizzas
+              <span id="ovenUpgradeCost">1000</span> pizzas
             </h5>
             <button id="OvenUpgradeBuy">Kjøp</button>
           </div>
