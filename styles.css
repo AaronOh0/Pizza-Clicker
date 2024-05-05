@@ -4,3 +4,47 @@
   cursor: pointer;
   border-radius: 50%;
 }
+
+.wrapper {
+  display: flex;
+}
+
+.spill {
+  min-width: 200px; /* Set a minimum width */
+  font-size: x-large;
+  /* background-color: pink; */
+  margin-left: 300px;
+  margin-top: 100px;
+}
+
+#kjop {
+  min-width: 200px;
+  margin-left: auto;
+  margin-right: 100px;
+  background-color: lightblue;
+  flex-direction: column-reverse;
+  font-size: x-large;
+  margin-top: 100px;
+}
+
+.pizzaHeader {
+  text-align: center;
+}
+
+#pizza-bilde {
+  transition: 0.3s;
+  animation: spin 20s linear infinite;
+}
+
+#pizza-bilde:hover {
+  transform: scale(1.1) rotate(0deg); /* Apply hover effect with scaling and reset rotation */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); /* Start the rotation from 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* Rotate the image by 360 degrees */
+  }
+}
