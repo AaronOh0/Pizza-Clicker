@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pizza Clicker</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="wrapper">
       <div class="spill">
         <div class="pizzaHeader">
-          <h2>
+          <h2 id="pizzas2">
             <span id="pizzas">0.00</span> <br />
             Pizzas
           </h2>
@@ -21,24 +27,30 @@
         <br />
         <br />
         <button id="pizza-button">
-          <img
-            src="bilder/360_F_660745815_t42ZNjS0uffcI6LcsYy13asY8lHS5Lpw.jpg"
-            alt=""
-            id="pizza-bilde"
-          />
+          <div id="container">
+            <img
+              src="bilder/image-removebg-preview.png"
+              alt=""
+              id="pizza-bilde"
+            />
+          </div>
         </button>
       </div>
       <div id="kjop">
         <div id="clicker">
-          <h4>
-            Clickers koster <span id="clicker-price">25</span> Pizzas<button
+          <h4 id="topp1">
+            <img
               id="clicker-buy"
-            >
-              Kjøp
-            </button>
+              src="Cursor_icon_with_shadow.png"
+              width="80px"
+              height="80px"
+              class="bilder"
+            />
+            koster <span id="clicker-price">25</span> Pizzas
           </h4>
-          <h5>Du har <span id="clicker-quantity">0</span> Clickers</h5>
-          <!-- */add clicker oppgraderinger når man har fått 100 pizzas -->
+          <h5 id="clickerQ">
+            Du har <span id="clicker-quantity">0</span> Clickers
+          </h5>
 
           <div id="clicker-upgrades">
             <h5>
@@ -50,14 +62,21 @@
         </div>
 
         <div id="oven">
-          <h5>
-            Oven koster <span id="oven-price">100</span> Pizzas<button
-              id="oven-buy"
-            >
-              Kjøp
-            </button>
-          </h5>
-          <h5>Du har <span id="oven-quantity">0</span> Ovens</h5>
+          <div id="ovenQ">
+            <h4 id="topp2">
+              <img
+                src="4201875.png"
+                width="80px"
+                height="80px"
+                id="oven-buy"
+                class="bilder"
+              />
+              koster<span id="oven-price">100</span> Pizzas
+            </h4>
+            <h5 id="underOvenQ">
+              Du har <span id="oven-quantity">0</span> Ovens
+            </h5>
+          </div>
 
           <div id="oven-upgrades">
             <h5>
@@ -69,25 +88,40 @@
         </div>
 
         <div id="pepperoni">
-          <h5>
-            Pepperoni koster <span id="pepperoni-price">500</span> Pizzas<button
-              id="pepperoni-buy"
-            >
-              Kjøp
-            </button>
-          </h5>
-          <h5>Du har <span id="pepperoni-quantity">0</span> Pepperoni</h5>
+          <div id="pepperoniQ">
+            <h4 id="topp3">
+              <img
+                src="13325372.png"
+                width="80px"
+                width="80px"
+                id="pepperoni-buy"
+                class="bilder"
+              />
+              koster
+              <span id="pepperoni-price">500</span> Pizzas
+            </h4>
+            <h5 id="pepQUnder">
+              Du har <span id="pepperoni-quantity">0</span> Pepperoni
+            </h5>
+          </div>
         </div>
 
         <div id="Onkel">
-          <h5>
-            Onkel koster <span id="onkel-price">1000</span> Pizzas<button
-              id="onkel-buy"
-            >
-              Kjøp
-            </button>
-          </h5>
-          <h5>Du har <span id="onkel-quantity">0</span> Onkler</h5>
+          <div id="onkelQ">
+            <h4 id="topp4">
+              <img
+                src="4059210.png"
+                width="80px"
+                height="80px"
+                id="onkel-buy"
+                class="bilder"
+              />
+              koster <span id="onkel-price">1000</span> Pizzas
+            </h4>
+            <h5 id="onkelQUnder">
+              Du har <span id="onkel-quantity">0</span> Onkler
+            </h5>
+          </div>
 
           <div id="onkel-upgrades">
             <h5>

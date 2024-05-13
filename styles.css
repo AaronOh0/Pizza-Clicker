@@ -1,8 +1,8 @@
 #pizza-button {
   border: none;
-  background-color: #fff;
   cursor: pointer;
   border-radius: 50%;
+  background-color: transparent;
 }
 
 .wrapper {
@@ -14,30 +14,50 @@
   font-size: x-large;
   /* background-color: pink; */
   margin-left: 300px;
-  margin-top: 100px;
+  margin-top: 10px;
 }
 
 #kjop {
   min-width: 200px;
-  margin-left: auto;
+  margin-left: 100px;
   margin-right: 100px;
-  background-color: lightblue;
+  background: url(2.png) no-repeat rgb(203, 3, 3);
+  border: 12px rgb(255, 178, 110) solid;
+  width: 400px;
+  text-align: center;
+  height: fit-content;
   flex-direction: column-reverse;
+  border-radius: 20px;
   font-size: x-large;
-  margin-top: 100px;
+  margin-top: 20px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  font-family: "Merienda", cursive;
 }
 
 .pizzaHeader {
   text-align: center;
 }
 
-#pizza-bilde {
-  transition: 0.3s;
+#container {
+  position: relative;
+  margin-bottom: 100px;
+  width: 400px;
+  height: 375px;
+  overflow: hidden;
+  z-index: 99;
+  transition: all 0.3s ease-in;
+  user-select: none;
   animation: spin 20s linear infinite;
 }
 
+#pizza-bilde {
+  /* animation: spin 20s linear infinite; */
+  transition: all 0.3s ease-in;
+}
+
 #pizza-bilde:hover {
-  transform: scale(1.1) rotate(0deg); /* Apply hover effect with scaling and reset rotation */
+  transform: scale(1.08);
+  transition: all 0.3s ease-out;
 }
 
 @keyframes spin {
@@ -47,4 +67,108 @@
   to {
     transform: rotate(360deg); /* Rotate the image by 360 degrees */
   }
+}
+
+@keyframes hover {
+  from {
+    transform: scale(100%);
+  }
+
+  to {
+    transform: scale(110%);
+  }
+}
+
+.spacing {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+h4,
+h5 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+h5 {
+  justify-content: center;
+}
+
+#clickerQ {
+  margin-bottom: 20px;
+}
+
+#ovenQ {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  gap: 8px;
+}
+
+#underOvenQ {
+  margin-bottom: 10px;
+}
+
+#pepQUnder {
+  margin-bottom: 10px;
+}
+
+#onkelQ {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  gap: 8px;
+}
+
+#onkelQUnder {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#pepperoniQ {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  gap: 8px;
+}
+
+#clicker {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#Onkel {
+  margin-bottom: 20px;
+}
+
+body {
+  background-image: url(pizza-background-doodle-style-pizza-ingredients-menu-design-template-top-view_75047-10.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bilder {
+  margin-left: 5px;
+  transition: all 0.3s ease-in;
+}
+
+.bilder:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+#topp1,
+#topp2,
+#topp3,
+#topp4 {
+  margin-left: 10px;
+}
+
+#pizzas2 {
 }
