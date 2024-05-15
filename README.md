@@ -1,1 +1,1 @@
-spill med 3 abilities som man kan kjøpe og funker, må adde flere abilities og jobbe mer med css
+Levi har gjort veldig mange endringer i CSS, er enda ikke ferdig med selvespillet(hvordan det ser ut)
